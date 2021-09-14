@@ -1,10 +1,10 @@
-import { GenreResponseProps } from "../@types";
+import { HeaderProps } from "../@types";
 
-export function Header(props: {genre: GenreResponseProps}) {
+export function Header({ title }: HeaderProps) {
   return (
     <header>
       <span className="category">
-        Categoria:<span> {props.genre.title}</span>
+        Categoria:<span> {title}</span>
       </span>
     </header>
   );

@@ -1,16 +1,16 @@
-import { GenreResponseProps, MovieProps } from "../@types";
-import { Header } from "./Header";
+import { ContentProps } from "../@types";
 
+import { Header } from "./Header";
 import { MovieCard } from "./MovieCard";
 
-export function Content(props: {selectedGenre: GenreResponseProps, movies: Array<MovieProps>}) {
+export function Content({selectedGenre, movies}: ContentProps) {
   return (
     <div className="container">
-        <Header genre={props.selectedGenre} />
+        <Header title={selectedGenre.title} />
 
         <main>
           <div className="movies-list">
-            {props.movies.map((movie) => (
+            {movies.map((movie) => (
               <MovieCard 
                 key ={movie.imdbID} 
                 title={movie.Title} 

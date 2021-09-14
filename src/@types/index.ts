@@ -14,3 +14,17 @@ export interface MovieProps {
   }>;
   Runtime: string;
 }
+
+export interface SideBarProps {
+  genres: GenreResponseProps[];
+  handleClickButton(id: number): void;
+  selectedGenreId: number;
+};
+export interface HeaderProps {
+  title: string;
+}
+
+export interface ContentProps {
+  selectedGenre: GenreResponseProps;
+  movies: MovieProps[];
+}

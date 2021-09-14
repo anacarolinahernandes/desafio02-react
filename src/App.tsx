@@ -46,7 +46,7 @@ export function App() {
       <SideBar 
         genres={genres} 
         handleClickButton={handleClickButton} 
-        selectedGenre={selectedGenreId} 
+        selectedGenreId={selectedGenreId} 
       />
 
       <Content 
